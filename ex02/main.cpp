@@ -6,7 +6,7 @@
 /*   By: ncollign <ncollign@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 14:17:35 by ncollign          #+#    #+#             */
-/*   Updated: 2025/04/28 17:09:30 by ncollign         ###   ########.fr       */
+/*   Updated: 2025/04/28 17:18:56 by ncollign         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,41 +16,40 @@
 
 int main()
 {
-    std::cout << "\n=== Basic animal tests ===" << std::endl;
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    std::cout << "\n=== Testing Dog and Cat ===" << std::endl;
+
+    const Animal* dog = new Dog();
+    const Animal* cat = new Cat();
+	//const Animal* meta = new Animal();
+	// Interdit car classe abstraite (virtuelle)
+
+    std::cout << "\nTypes:" << std::endl;
+    std::cout << dog->getType() << std::endl;
+    std::cout << cat->getType() << std::endl;
 
     std::cout << "\nSounds:" << std::endl;
-    j->makeSound();
-    i->makeSound();
+    dog->makeSound();
+    cat->makeSound();
 
-    delete j;
-    delete i;
+    delete dog;
+    delete cat;
 
-    std::cout << "\n=== Deep copy tests ===" << std::endl;
+    std::cout << "\n=== Testing deep copy Dog ===" << std::endl;
     Dog basicDog;
-    basicDog.getBrain()->setIdea(0, "Catch the ball!");
-	basicDog.getBrain()->setIdea(1, "Eat!");
+    basicDog.getBrain()->setIdea(0, "Chase the cat!");
+    basicDog.getBrain()->setIdea(1, "Eat a bone!");
 
+    Dog copiedDog = basicDog;
 
-    Dog copyDog = basicDog;
-
-    std::cout << "\nIdea 0 (basicDog): " << basicDog.getBrain()->getIdea(0) << std::endl;
-	std::cout << "Idea 1 (basicDog): " << basicDog.getBrain()->getIdea(1) << std::endl;
-	std::cout << "Idea 2 (basicDog): " << basicDog.getBrain()->getIdea(2) << std::endl;
-    std::cout << "Idea 0 (copyDog): " << copyDog.getBrain()->getIdea(0) << std::endl;
-	std::cout << "Idea 1 (copyDog): " << copyDog.getBrain()->getIdea(1) << std::endl;
-	std::cout << "Idea 2 (copyDog): " << copyDog.getBrain()->getIdea(2) << std::endl;
+    std::cout << "\nIdeas before modifying:" << std::endl;
+    std::cout << "basicDog idea 0: " << basicDog.getBrain()->getIdea(0) << std::endl;
+    std::cout << "copiedDog idea 0: " << copiedDog.getBrain()->getIdea(0) << std::endl;
 
     basicDog.getBrain()->setIdea(0, "Sleep...");
 
-    std::cout << "\nAfter modifying basicDog's brain:" << std::endl;
-    std::cout << "Idea 0 (basicDog): " << basicDog.getBrain()->getIdea(0) << std::endl;
-	std::cout << "Idea 1 (basicDog): " << basicDog.getBrain()->getIdea(1) << std::endl;
-	std::cout << "Idea 2 (basicDog): " << basicDog.getBrain()->getIdea(2) << std::endl;
-    std::cout << "Idea 0 (copyDog): " << copyDog.getBrain()->getIdea(0) << std::endl;
-	std::cout << "Idea 1 (copyDog): " << copyDog.getBrain()->getIdea(1) << std::endl;
-	std::cout << "Idea 2 (copyDog): " << copyDog.getBrain()->getIdea(2) << std::endl;
+    std::cout << "\nIdeas after modifying basicDog:" << std::endl;
+    std::cout << "basicDog idea 0: " << basicDog.getBrain()->getIdea(0) << std::endl;
+    std::cout << "copiedDog idea 0: " << copiedDog.getBrain()->getIdea(0) << std::endl;
 
-    return (0);
+    return 0;
 }

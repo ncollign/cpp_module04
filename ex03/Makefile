@@ -6,16 +6,16 @@
 #    By: ncollign <ncollign@student.42luxembourg    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/25 12:25:16 by ncollign          #+#    #+#              #
-#    Updated: 2025/04/28 17:16:42 by ncollign         ###   ########.fr        #
+#    Updated: 2025/04/28 19:42:15 by ncollign         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = abstract_class
+NAME = materia
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp
+SRCS = main.cpp MateriaSource.cpp Ice.cpp Cure.cpp Character.cpp AMateria.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
