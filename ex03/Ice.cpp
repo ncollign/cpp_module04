@@ -6,7 +6,7 @@
 /*   By: ncollign <ncollign@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:16:55 by ncollign          #+#    #+#             */
-/*   Updated: 2025/04/28 18:26:44 by ncollign         ###   ########.fr       */
+/*   Updated: 2025/05/05 16:23:34 by ncollign         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Ice::Ice() : AMateria("ice") {}
 
-Ice::Ice(const Ice &other)
+Ice::Ice(const Ice &other) : AMateria(other)
 {
 	*this = other;
 }

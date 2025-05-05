@@ -6,7 +6,7 @@
 /*   By: ncollign <ncollign@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:34:51 by ncollign          #+#    #+#             */
-/*   Updated: 2025/04/28 19:27:48 by ncollign         ###   ########.fr       */
+/*   Updated: 2025/05/05 16:27:24 by ncollign         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Character &Character::operator=(const Character &other)
 		for (int i = 0; i < 4; ++i)
 		{
 			if (_inventory[i])
-				delete(_inventory);
+				delete(_inventory[i]);
 			if (other._inventory[i])
 				_inventory[i] = other._inventory[i]->clone();
 			else

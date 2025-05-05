@@ -6,7 +6,7 @@
 /*   By: ncollign <ncollign@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:00:20 by ncollign          #+#    #+#             */
-/*   Updated: 2025/04/28 19:44:47 by ncollign         ###   ########.fr       */
+/*   Updated: 2025/05/05 16:21:06 by ncollign         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define ICHARACTER_HPP
 
 #include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {
