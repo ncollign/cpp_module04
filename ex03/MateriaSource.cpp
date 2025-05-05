@@ -6,7 +6,7 @@
 /*   By: ncollign <ncollign@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 19:05:49 by ncollign          #+#    #+#             */
-/*   Updated: 2025/05/05 16:47:32 by ncollign         ###   ########.fr       */
+/*   Updated: 2025/05/05 17:08:28 by ncollign         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,13 @@ MateriaSource::MateriaSource()
 
 MateriaSource::MateriaSource(const MateriaSource &other)
 {
-	*this = other;
+	for (int i = 0; i < 4; ++i)
+	{
+		if (other._inventory[i])
+			_inventory[i] = other._inventory[i]->clone();
+		else
+			_inventory[i] = NULL;
+	}
 }
 
 MateriaSource &MateriaSource::operator=(const MateriaSource &other)
@@ -45,7 +51,7 @@ MateriaSource::~MateriaSource()
 	for (int i = 0; i < 4; ++i)
 	{
 		if (_inventory[i])
-			delete _inventory[i];
+			delete (_inventory[i]);
 	}
 }
 

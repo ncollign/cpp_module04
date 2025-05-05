@@ -6,7 +6,7 @@
 /*   By: ncollign <ncollign@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:34:51 by ncollign          #+#    #+#             */
-/*   Updated: 2025/05/05 16:27:24 by ncollign         ###   ########.fr       */
+/*   Updated: 2025/05/05 17:10:56 by ncollign         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ Character::Character(std::string const &name) : _name(name)
 
 Character::Character(const Character &other)
 {
+	for (int i = 0; i < 4; ++i)
+		_inventory[i] = NULL;
 	*this = other;
 }
 
