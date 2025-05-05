@@ -6,7 +6,7 @@
 /*   By: ncollign <ncollign@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 19:05:49 by ncollign          #+#    #+#             */
-/*   Updated: 2025/05/05 16:36:45 by ncollign         ###   ########.fr       */
+/*   Updated: 2025/05/05 16:47:32 by ncollign         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ void MateriaSource::learnMateria(AMateria *materia)
 		if (!_inventory[i])
 		{
 			_inventory[i] = materia;
-			std::cout << "Learned a materia in slot " << i << std::endl;
 			return ;
 		}
 	}
@@ -73,7 +72,7 @@ AMateria *MateriaSource::createMateria(std::string const &type)
 		if (_inventory[i] && _inventory[i]->getType() == type)
 		{
 			std::cout << "MateriaSource creating a materia of type: " << type << std::endl;
-			return _inventory[i]->clone();
+			return (_inventory[i]->clone());
 		}
 	}
 	std::cout << "No materia of type " << type << " found" << std::endl;

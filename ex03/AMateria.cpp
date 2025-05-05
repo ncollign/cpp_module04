@@ -6,7 +6,7 @@
 /*   By: ncollign <ncollign@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:03:01 by ncollign          #+#    #+#             */
-/*   Updated: 2025/04/28 18:16:24 by ncollign         ###   ########.fr       */
+/*   Updated: 2025/05/05 16:46:03 by ncollign         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,7 @@ AMateria &AMateria::operator=(const AMateria &other)
 	return (*this);
 }
 
-AMateria::~AMateria()
-{
-	std::cout << "AMateria destructor called" << std::endl;
-}
+AMateria::~AMateria() {}
 
 std::string const &AMateria::getType() const
 {

@@ -6,7 +6,7 @@
 /*   By: ncollign <ncollign@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:16:55 by ncollign          #+#    #+#             */
-/*   Updated: 2025/05/05 16:23:34 by ncollign         ###   ########.fr       */
+/*   Updated: 2025/05/05 16:42:31 by ncollign         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ AMateria *Ice::clone() const
 	return (new Ice(*this));
 }
 
-void Ice::use(ICharacter &target) const
+void Ice::use(ICharacter &target)
 {
 	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

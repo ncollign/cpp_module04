@@ -6,7 +6,7 @@
 /*   By: ncollign <ncollign@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:17:00 by ncollign          #+#    #+#             */
-/*   Updated: 2025/04/28 18:27:56 by ncollign         ###   ########.fr       */
+/*   Updated: 2025/05/05 16:43:26 by ncollign         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Cure : public AMateria
 		~Cure();
 
 		AMateria *clone() const;
-		void use(ICharacter &target) const;
+		void use(ICharacter &target);
 };
 
 #endif

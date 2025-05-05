@@ -6,7 +6,7 @@
 /*   By: ncollign <ncollign@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:16:38 by ncollign          #+#    #+#             */
-/*   Updated: 2025/04/28 18:28:06 by ncollign         ###   ########.fr       */
+/*   Updated: 2025/05/05 16:42:36 by ncollign         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Ice : public AMateria
 		~Ice();
 
 		AMateria *clone() const;
-		void use(ICharacter &target) const;
+		void use(ICharacter &target);
 };
 
 #endif
